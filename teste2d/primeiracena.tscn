@@ -1,0 +1,346 @@
+[gd_scene load_steps=11 format=3 uid="uid://db65rendvtj6u"]
+
+[ext_resource type="Script" uid="uid://bi1yli8s0pxf" path="res://character_body_2d.gd" id="1_dqg5c"]
+[ext_resource type="Texture2D" uid="uid://wskgu41v51p7" path="res://Knight_player/Idle_KG_2.png" id="2_oekdb"]
+[ext_resource type="Texture2D" uid="uid://c4mgcak8orjo5" path="res://floor.png" id="3_oekdb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tggai"]
+size = Vector2(33, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tggai"]
+atlas = ExtResource("2_oekdb")
+region = Rect2(0, 0, 100, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isqj2"]
+atlas = ExtResource("2_oekdb")
+region = Rect2(100, 0, 100, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc5yr"]
+atlas = ExtResource("2_oekdb")
+region = Rect2(200, 0, 100, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55vx1"]
+atlas = ExtResource("2_oekdb")
+region = Rect2(300, 0, 100, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wljn2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tggai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isqj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oc5yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55vx1")
+}],
+"loop": true,
+"name": &"parado",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oekdb"]
+size = Vector2(97, 33)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_dqg5c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(79.5, 230)
+shape = SubResource("RectangleShape2D_tggai")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(79.5, 229)
+scale = Vector2(0.99, 0.96875)
+sprite_frames = SubResource("SpriteFrames_wljn2")
+animation = &"parado"
+autoplay = "parado"
+frame_progress = 0.0555759
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(22, 117)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(21.5, 116.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(119, 117)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(118.5, 116.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(315, 117)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(314.5, 116.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
+position = Vector2(217, 117)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(216.5, 116.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(560, 193)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(559.5, 192.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(28, 281)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(27.5, 280.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(556, 351)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(555.5, 350.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D7" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(377, 417)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(376.5, 416.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D8" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(428, 220)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(427.5, 219.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D10" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(688, 142)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(687.5, 141.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D11" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(502, 97)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(501.5, 96.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D9" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(1028, 271)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(1027.5, 270.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(46, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(45.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(438, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(437.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D6" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(826, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(825.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(657, 193)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(656.5, 192.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(125, 281)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(124.5, 280.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(653, 351)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(652.5, 350.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(143, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(142.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(535, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(534.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D6" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(923, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(922.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7"]
+position = Vector2(853, 193)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(852.5, 192.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D7"]
+position = Vector2(321, 281)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(320.5, 280.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D7"]
+position = Vector2(849, 351)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(848.5, 350.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D7"]
+position = Vector2(339, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(338.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="StaticBody2D7"]
+position = Vector2(731, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(730.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D6" type="Sprite2D" parent="StaticBody2D7"]
+position = Vector2(1119, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(1118.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D8"]
+position = Vector2(755, 193)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2(754.5, 192.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D8"]
+position = Vector2(223, 281)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2(222.5, 280.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D8"]
+position = Vector2(751, 351)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2(750.5, 350.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D8"]
+position = Vector2(241, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2(240.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="StaticBody2D8"]
+position = Vector2(633, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2(632.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
+
+[node name="Sprite2D6" type="Sprite2D" parent="StaticBody2D8"]
+position = Vector2(1021, 472)
+texture = ExtResource("3_oekdb")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2(1020.5, 471.5)
+shape = SubResource("RectangleShape2D_oekdb")
